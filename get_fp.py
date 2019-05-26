@@ -238,9 +238,9 @@ class Complex(object):
                spin_image_radius_range = (0, 20),
                spin_image_height_range =  (-30, 10),
                sphere_radius_range = (0, 20),
-               spin_image_radius_step = 2,
+               spin_image_radius_step = 2,               
                spin_image_height_step = 5,
-               sphere_radius_step = 2,
+               sphere_radius_step = 2, 
                physchem_type_num = 3):
         """
         get the 110-bit fingerprint
@@ -282,7 +282,7 @@ class Complex(object):
             res.get_surrounding_fp(dist_step, dist_ind_min, dist_ind_max, include_glyco = include_glyco, offset = cylinder_slice_count)
             
             res.get_struct_fp(spin_image_radius_step, spin_image_height_step,
-                              spin_image_radius_ind_min, spin_image_radius_ind_max,
+                              spin_image_radius_ind_min, spin_image_radius_ind_max, 
                               spin_image_height_ind_min, spin_image_height_ind_max,
                               spin_image_radius_seg_cnt, spin_image_height_seg_cnt)
             
@@ -331,8 +331,8 @@ if __name__ == "__main__":
     
     try:
         path = 'F:\\20141013_agab\\epi_para_tope_whole\\ab_ag_l3\\1A2Y\\1A2Y_C.pdb' #sys.argv[1]
-        horizontal = 5  #int(sys.argv[2])
-        vertical = 4    #int(sys.argv[3])
+        horizontal = 5#int(sys.argv[2])
+        vertical = 4#int(sys.argv[3])
         
         epitope = [13,18,19,21,22,23,24,25,26,27,102,103,116,117,118,119,120,121,122,124,125,126,127,128,129]#[] if len(sys.argv) == 4 else map(int, sys.argv[-1].split (','))
     except:
